@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: newbottomline
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  name: my-service
+  type: NodePort  
+  port: 9090
+
+ingress:
+  enabled: true
+
+autoscaling:
+    enabled: false
